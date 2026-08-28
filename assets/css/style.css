@@ -1,7 +1,3 @@
-/* =====================================================
-   PROYECTO CAUCA — STYLE.CSS
-   ===================================================== */
-
 :root{
     --primary:#001F77;
     --secondary:#2563EB;
@@ -25,12 +21,12 @@ html{
 
 body{
     font-family:Arial, Helvetica, sans-serif;
-    color:var(--text);
     background:var(--light);
+    color:var(--text);
     line-height:1.6;
 }
 
-/* ---------- Navigation ---------- */
+/* NAVBAR */
 
 .navbar{
     position:fixed;
@@ -43,8 +39,7 @@ body{
     padding:18px 7%;
     background:rgba(0,31,119,.92);
     backdrop-filter:blur(10px);
-    box-shadow:none;
-    transition:background .3s ease, box-shadow .3s ease;
+    transition:.3s;
     z-index:1000;
 }
 
@@ -57,7 +52,7 @@ body{
     display:flex;
     align-items:center;
     gap:12px;
-    color:#FFFFFF;
+    color:white;
     font-weight:bold;
 }
 
@@ -74,10 +69,9 @@ body{
 
 .menu a{
     position:relative;
-    color:#FFFFFF;
+    color:white;
     text-decoration:none;
-    font-size:.95rem;
-    transition:color .3s ease, opacity .3s ease;
+    transition:.3s;
 }
 
 .menu a:hover{
@@ -98,37 +92,7 @@ body{
     background:#BFDBFE;
 }
 
-.logo{
-    display:flex;
-    align-items:center;
-    gap:12px;
-    color:white;
-    font-weight:bold;
-}
-
-.logo img{
-    width:42px;
-    height:42px;
-    object-fit:contain;
-}
-
-.menu{
-    display:flex;
-    gap:28px;
-}
-
-.menu a{
-    color:white;
-    text-decoration:none;
-    font-size:.95rem;
-    transition:.3s;
-}
-
-.menu a:hover{
-    opacity:.75;
-}
-
-/* ---------- Hero ---------- */
+/* HERO */
 
 .hero{
     position:relative;
@@ -136,9 +100,9 @@ body{
     display:flex;
     align-items:center;
     justify-content:center;
+    text-align:center;
     background-size:cover;
     background-position:center;
-    text-align:center;
     color:white;
     padding:2rem;
 }
@@ -147,15 +111,12 @@ body{
     content:"";
     position:absolute;
     inset:0;
-    background:linear-gradient(
-        rgba(0,31,119,.82),
-        rgba(15,23,42,.72)
-    );
+    background:linear-gradient(rgba(0,31,119,.82), rgba(15,23,42,.72));
 }
 
 .hero-content{
     position:relative;
-    z-index:2;
+    z-index:1;
     max-width:850px;
 }
 
@@ -163,20 +124,16 @@ body{
     letter-spacing:2px;
     font-size:.8rem;
     margin-bottom:18px;
-    opacity:.9;
 }
 
 .hero h1{
     font-size:3.8rem;
-    line-height:1.1;
-    margin-bottom:22px;
+    margin-bottom:20px;
 }
 
 .subtitle{
     font-size:1.2rem;
-    max-width:700px;
-    margin:0 auto 34px;
-    opacity:.95;
+    margin-bottom:34px;
 }
 
 .hero-buttons{
@@ -186,7 +143,7 @@ body{
     flex-wrap:wrap;
 }
 
-/* ---------- Buttons ---------- */
+/* BUTTONS */
 
 .btn{
     display:inline-block;
@@ -206,26 +163,24 @@ body{
 
 .secondary{
     background:transparent;
-    border:2px solid white;
     color:white;
+    border:2px solid white;
 }
 
-/* ---------- Statistics ---------- */
+/* STATS */
 
 .stats{
     display:grid;
     grid-template-columns:repeat(3,1fr);
     gap:30px;
+    width:min(1100px,90%);
+    margin:-55px auto 0;
     padding:55px 8%;
     background:white;
+    border-radius:18px;
     box-shadow:var(--shadow);
-    margin-top:-55px;
     position:relative;
     z-index:20;
-    width:min(1100px,90%);
-    margin-left:auto;
-    margin-right:auto;
-    border-radius:18px;
 }
 
 .stat{
@@ -237,11 +192,7 @@ body{
     font-size:2.4rem;
 }
 
-.stat p{
-    color:#64748B;
-}
-
-/* ---------- Sections ---------- */
+/* SECTIONS */
 
 .section{
     padding:90px 8%;
@@ -258,18 +209,18 @@ body{
 
 .section-tag{
     color:var(--secondary);
+    font-size:.8rem;
     font-weight:bold;
     letter-spacing:1px;
-    font-size:.8rem;
 }
 
 .section h2{
+    margin-top:8px;
     font-size:2.3rem;
     color:var(--dark);
-    margin-top:8px;
 }
 
-/* ---------- About ---------- */
+/* ABOUT */
 
 .about{
     display:grid;
@@ -288,7 +239,7 @@ body{
     margin-top:18px;
 }
 
-/* ---------- Cards ---------- */
+/* CARDS */
 
 .cards{
     display:grid;
@@ -297,10 +248,10 @@ body{
 }
 
 .card{
+    padding:28px;
     background:var(--light);
     border:1px solid var(--border);
     border-radius:16px;
-    padding:28px;
     transition:.3s;
 }
 
@@ -314,7 +265,7 @@ body{
     margin-bottom:14px;
 }
 
-/* ---------- Gallery ---------- */
+/* PROJECTS */
 
 .gallery{
     display:grid;
@@ -344,11 +295,11 @@ body{
     margin-bottom:10px;
 }
 
-/* ---------- Contact ---------- */
+/* CONTACT */
 
 .contact{
-    background:linear-gradient(135deg,var(--primary),#1238A8);
     padding:90px 8%;
+    background:linear-gradient(135deg,var(--primary),#1238A8);
 }
 
 .contact-box{
@@ -365,18 +316,13 @@ body{
 
 .contact-box p{
     margin-bottom:30px;
-    opacity:.95;
 }
 
 .contact .section-tag{
     color:#BFDBFE;
 }
 
-.contact .btn{
-    background:white;
-}
-
-/* ---------- Footer ---------- */
+/* FOOTER */
 
 .footer{
     background:var(--dark);
@@ -385,12 +331,23 @@ body{
     padding:28px;
 }
 
-/* ---------- Responsive ---------- */
+/* MOBILE MENU */
+
+.hamburger{
+    display:none;
+    background:none;
+    border:none;
+    color:white;
+    font-size:1.8rem;
+    cursor:pointer;
+}
+
+/* RESPONSIVE */
 
 @media (max-width:900px){
 
     .hero h1{
-        font-size:2.7rem;
+        font-size:2.8rem;
     }
 
     .about{
@@ -406,15 +363,25 @@ body{
 @media (max-width:700px){
 
     .navbar{
-        flex-direction:column;
-        gap:14px;
+        flex-wrap:wrap;
         padding:16px 5%;
     }
 
+    .hamburger{
+        display:block;
+    }
+
     .menu{
-        gap:16px;
-        flex-wrap:wrap;
-        justify-content:center;
+        display:none;
+        width:100%;
+        flex-direction:column;
+        gap:18px;
+        text-align:center;
+        padding:20px 0;
+    }
+
+    .menu.show{
+        display:flex;
     }
 
     .hero{
@@ -428,43 +395,5 @@ body{
     .subtitle{
         font-size:1rem;
     }
-/* =====================================================
-   MOBILE MENU
-===================================================== */
 
-.hamburger{
-    display:none;
-    background:none;
-    border:none;
-    color:white;
-    font-size:1.8rem;
-    cursor:pointer;
-}
-
-@media (max-width:700px){
-
-    .navbar{
-        flex-wrap:wrap;
-        justify-content:space-between;
-        padding:16px 5%;
-    }
-
-    .hamburger{
-        display:block;
-    }
-
-    .menu{
-        display:none;
-        width:100%;
-        flex-direction:column;
-        gap:18px;
-        padding:20px 0 10px;
-        text-align:center;
-    }
-
-    .menu.show{
-        display:flex;
-    }
-
-}
 }
