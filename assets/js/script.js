@@ -2,30 +2,50 @@ const navbar = document.querySelector(".navbar");
 const sections = document.querySelectorAll("section");
 const links = document.querySelectorAll(".menu a");
 
-// Change navbar appearance while scrolling
+const menu = document.getElementById("menu");
+const menuBtn = document.getElementById("menuBtn");
+
+// Open / close mobile menu
+menuBtn.addEventListener("click", () => {
+    menu.classList.toggle("show");
+});
+
+// Close menu after clicking a link
+links.forEach(link => {
+    link.addEventListener("click", () => {
+        menu.classList.remove("show");
+    });
+});
+
+// Scroll behavior
 window.addEventListener("scroll", () => {
-    if (window.scrollY > 60) {
+
+    if(window.scrollY > 60){
         navbar.classList.add("scrolled");
-    } else {
+    }else{
         navbar.classList.remove("scrolled");
     }
 
     let current = "";
 
     sections.forEach(section => {
-        const top = section.offsetTop - 120;
-        const height = section.offsetHeight;
 
-        if (window.scrollY >= top) {
-            current = section.getAttribute("id");
+        const top = section.offsetTop - 140;
+
+        if(window.scrollY >= top){
+            current = section.id;
         }
+
     });
 
     links.forEach(link => {
+
         link.classList.remove("active");
 
-        if (link.getAttribute("href") === "#" + current) {
+        if(link.getAttribute("href") === "#" + current){
             link.classList.add("active");
         }
+
     });
+
 });
