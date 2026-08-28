@@ -428,5 +428,43 @@ body{
     .subtitle{
         font-size:1rem;
     }
+/* =====================================================
+   MOBILE MENU
+===================================================== */
 
+.hamburger{
+    display:none;
+    background:none;
+    border:none;
+    color:white;
+    font-size:1.8rem;
+    cursor:pointer;
+}
+
+@media (max-width:700px){
+
+    .navbar{
+        flex-wrap:wrap;
+        justify-content:space-between;
+        padding:16px 5%;
+    }
+
+    .hamburger{
+        display:block;
+    }
+
+    .menu{
+        display:none;
+        width:100%;
+        flex-direction:column;
+        gap:18px;
+        padding:20px 0 10px;
+        text-align:center;
+    }
+
+    .menu.show{
+        display:flex;
+    }
+
+}
 }
