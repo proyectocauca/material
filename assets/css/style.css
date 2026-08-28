@@ -199,3 +199,38 @@ body{
         padding:70px 7%;
     }
 }
+/* Logo */
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo img{
+    height:40px;
+    width:auto;
+}
+
+/* Hero background image */
+
+.hero{
+    position:relative;
+    background-size:cover;
+    background-position:center;
+    overflow:hidden;
+}
+
+.hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(0,31,119,.72);
+}
+
+.hero h1,
+.hero p,
+.hero .btn{
+    position:relative;
+    z-index:1;
+}
