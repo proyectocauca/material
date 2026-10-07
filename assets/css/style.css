@@ -397,3 +397,32 @@ body{
     }
 
 }
+
+/* ---------- Project Links ---------- */
+
+.project-link{
+    display:block;
+    text-decoration:none;
+    color:inherit;
+}
+
+.project-link:hover{
+    text-decoration:none;
+}
+
+.project-link .project{
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+}
+
+.project-link:hover .project{
+    transform:translateY(-6px);
+    box-shadow:0 16px 35px rgba(15,23,42,.14);
+}
+
+.project-link:focus-visible{
+    outline:3px solid #2563EB;
+    outline-offset:5px;
+    border-radius:16px;
+}
